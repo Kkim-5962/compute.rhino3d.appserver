@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Metaball Table</title>
+        <style>
+            body { margin: 0; }
+            canvas { width: 100%; height: 100%; }
+            input {width: 90%;}
+            #container {position: relative;}
+            #container canvas, #overlay { position: absolute;}
+            #overlay {z-index: 1; width: 100%}
+
+            #loader {
+                border: 5px solid #f3f3f3; /* Light grey */
+                border-top: 5px solid #3d3d3d; /* Grey */
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                animation: spin 1s linear infinite;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 2;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="loader"></div> 
+        <div id="container">
+            <div id="overlay">
+                <div>
+                    <input type="range" id="dimension" name="dimension" min="350" max="1000" value="800" step="10">
+                    <label for="dimension">Dimension</label>
+                </div>
+                <div>
+                    <input type="range" id="SP_Radius1" name="SP_Radius1" min="20" max="300" value="50" step="1">
+                    <label for="SP_Radius1">SP_Radius1</label>
+                </div>
+                <div>
+                    <input type="range" id="SP_Radius2" name="SP_Radius2" min="20" max="300" value="50" step="1">
+                    <label for="SP_Radius2">SP_Radius2</label>
+                </div>
+                <div>
+                    <input type="range" id="SP_Radius3" name="SP_Radius2" min="20" max="300" value="50" step="1">
+                    <label for="SP_Radius3">SP_Radius3</label>
+                </div>
+                <div>
+                    <input type="range" id="SP_Radius4" name="SP_Radius3" min="20" max="300" value="50" step="1">
+                    <label for="SP_Radius4">SP_Radius4</label>
+                </div>
+                <div>
+                    <input type="range" id="SP_Radius5" name="SP_Radius4" min="20" max="300" value="50" step="1">
+                    <label for="SP_Radius5">SP_Radius5</label>
+                </div>
+
+            </div>
+        </div>
+        <script type="module" src="./script.js"></script>
+    </body>
+</html>
