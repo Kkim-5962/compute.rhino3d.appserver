@@ -9,7 +9,7 @@ import rhino3dm from 'https://cdn.jsdelivr.net/npm/rhino3dm@0.15.0-beta/rhino3dm
 const loader = new Rhino3dmLoader()
 loader.setLibraryPath( 'https://cdn.jsdelivr.net/npm/rhino3dm@0.15.0-beta/' )
 
-const definition = 'EvolutiveCocoon.gh'
+const definition = 'EvolvCocoon.gh'
 
 // setup input change events
 const dimension_slider = document.getElementById( 'dimension' )
@@ -30,8 +30,6 @@ Radius4_slider.addEventListener( 'touchend', onSliderChange, false )
 const Radius5_slider = document.getElementById( 'SP_Radius5' )
 Radius5_slider.addEventListener( 'mouseup', onSliderChange, false )
 Radius5_slider.addEventListener( 'touchend', onSliderChange, false )
-
-
 
 let points = []
 
@@ -124,7 +122,6 @@ async function compute () {
       'SP_Radius3': Radius3_slider.valueAsNumber,
       'SP_Radius4': Radius4_slider.valueAsNumber,
       'SP_Radius5': Radius5_slider.valueAsNumber,
-
       'points': points
     }
   }
