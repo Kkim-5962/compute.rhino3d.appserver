@@ -31,7 +31,7 @@ const Radius5_slider = document.getElementById( 'SP_Radius5' )
 Radius5_slider.addEventListener( 'mouseup', onSliderChange, false )
 Radius5_slider.addEventListener( 'touchend', onSliderChange, false )
 const checkbox = document.getElementById( 'RH_IN:SUNLIGHT ANALYSIS')
-checkbox.addEventListener( 'onclick', onSliderChange, false)
+checkbox.addEventListener( 'click', onSliderChange, false)
 
 let points = []
 
